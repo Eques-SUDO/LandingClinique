@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Chraibi Mounir - Smile Design | Clinique Dentaire Casablanca</title>
+    <meta name="description" content="Dr. Chraibi Mounir propose des soins dentaires avancés avec le Smile Design. Protocole médical personnalisé pour un sourire parfait à Casablanca.">
+    <meta name="keywords" content="dentiste casablanca, smile design, facettes dentaires, blanchiment, orthodontie, Dr Chraibi">
+    <meta name="author" content="Dr. Chraibi Mounir">
+    <meta property="og:title" content="Dr. Chraibi Mounir - Smile Design | Casablanca">
+    <meta property="og:description" content="Transformez votre sourire avec notre protocole Smile Design personnalisé">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/clinic-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1139786217976631');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead', {
+        content_name: 'Smile Design',
+        content_category: 'Dentistry',
+        value: 0.00,
+        currency: 'USD'
+    });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1139786217976631&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-container">
+            <!-- Top Section: Logo and Title -->
+            <div class="hero-header">
+                <div class="hero-logo">
+                    <img src="assets/clinic-logo.png" alt="Chraibi Dental Clinic" class="logo-img">
+                </div>
+                <div class="hero-text">
+                    <h1 class="main-title">
+                        Remplacer Facilement<br>
+                        <span class="highlight">Vos Dents Manquantes</span>
+                    </h1>
+                    <p class="subtitle">
+                        Découvrez la <span class="text-highlight">meilleure solution</span> pour remplacer vos dents – 
+                        <span class="text-highlight">rapide</span> et <span class="text-highlight">sans douleur</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main Content: Quiz and Doctor Image -->
+            <div class="hero-main">
+                <!-- Quiz Section -->
+                <div class="hero-quiz">
+                    <div class="quiz-header">
+                        <h2>Évaluez vos besoins dentaires</h2>
+                        <p>Répondez à quelques questions pour recevoir des conseils personnalisés</p>
+                    </div>
+                    
+                    <form id="dentalQuiz" class="quiz-form">
+                        <!-- Question 1 -->
+                        <div class="quiz-question active" data-question="1">
+                            <h3>Qu'aimeriez-vous améliorer ?</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="improvement" value="aligner">
+                                    <span class="checkmark"></span>
+                                    Aligner mes dents
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="improvement" value="remplacer">
+                                    <span class="checkmark"></span>
+                                    Remplacer des dents manquantes
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="improvement" value="blanchiment">
+                                    <span class="checkmark"></span>
+                                    Blanchiment / Esthétique
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="improvement" value="macher">
+                                    <span class="checkmark"></span>
+                                    Mâcher correctement
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="improvement" value="autre">
+                                    <span class="checkmark"></span>
+                                    Autre : <input type="text" class="other-input" placeholder="Précisez...">
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="quiz-question" data-question="2">
+                            <h3>Ressentez-vous une gêne ou une douleur actuellement ?</h3>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="pain" value="oui">
+                                    <span class="radio-mark"></span>
+                                    Oui → Où et depuis quand ? <input type="text" class="pain-details" placeholder="Précisez...">
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="pain" value="non">
+                                    <span class="radio-mark"></span>
+                                    Non
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="quiz-question" data-question="3">
+                            <h3>Sur une échelle de 1 à 10, à quel point cela impacte votre quotidien ?</h3>
+                            <div class="scale-group">
+                                <div class="scale-labels">
+                                    <span>Pas du tout</span>
+                                    <span>Énormément</span>
+                                </div>
+                                <div class="scale-options">
+                                    <label class="scale-item" data-value="1">
+                                        <input type="radio" name="impact" value="1">
+                                        <span class="scale-number">1</span>
+                                    </label>
+                                    <label class="scale-item" data-value="2">
+                                        <input type="radio" name="impact" value="2">
+                                        <span class="scale-number">2</span>
+                                    </label>
+                                    <label class="scale-item" data-value="3">
+                                        <input type="radio" name="impact" value="3">
+                                        <span class="scale-number">3</span>
+                                    </label>
+                                    <label class="scale-item" data-value="4">
+                                        <input type="radio" name="impact" value="4">
+                                        <span class="scale-number">4</span>
+                                    </label>
+                                    <label class="scale-item" data-value="5">
+                                        <input type="radio" name="impact" value="5">
+                                        <span class="scale-number">5</span>
+                                    </label>
+                                    <label class="scale-item" data-value="6">
+                                        <input type="radio" name="impact" value="6">
+                                        <span class="scale-number">6</span>
+                                    </label>
+                                    <label class="scale-item" data-value="7">
+                                        <input type="radio" name="impact" value="7">
+                                        <span class="scale-number">7</span>
+                                    </label>
+                                    <label class="scale-item" data-value="8">
+                                        <input type="radio" name="impact" value="8">
+                                        <span class="scale-number">8</span>
+                                    </label>
+                                    <label class="scale-item" data-value="9">
+                                        <input type="radio" name="impact" value="9">
+                                        <span class="scale-number">9</span>
+                                    </label>
+                                    <label class="scale-item" data-value="10">
+                                        <input type="radio" name="impact" value="10">
+                                        <span class="scale-number">10</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="quiz-question" data-question="4">
+                            <h3>Quand souhaiteriez-vous commencer le traitement ?</h3>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="timeline" value="asap">
+                                    <span class="radio-mark"></span>
+                                    Dès que possible
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="timeline" value="1-3-months">
+                                    <span class="radio-mark"></span>
+                                    Dans 1 à 3 mois
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="timeline" value="3-plus-months">
+                                    <span class="radio-mark"></span>
+                                    Dans plus de 3 mois
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="timeline" value="research-only">
+                                    <span class="radio-mark"></span>
+                                    Je me renseigne seulement
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="quiz-question" data-question="5">
+                            <h3>Un sourire sain est un investissement. Pour mieux vous orienter…<br>
+                            Quel budget seriez-vous prêt(e) à envisager ?</h3>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="budget" value="moins-3000">
+                                    <span class="radio-mark"></span>
+                                    Moins de 3000 dh
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="budget" value="3000-7000">
+                                    <span class="radio-mark"></span>
+                                    Entre 3000 et 7000 dh
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="budget" value="plus-7000">
+                                    <span class="radio-mark"></span>
+                                    Plus de 7000 dh
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="budget" value="autre">
+                                    <span class="radio-mark"></span>
+                                    Autre : <input type="text" class="budget-input" placeholder="Précisez votre budget..." name="budget_custom">
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="budget" value="ne-sais-pas">
+                                    <span class="radio-mark"></span>
+                                    Je ne sais pas encore
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="quiz-question" data-question="6">
+                            <h3>Notre cabinet est situé à CASABLANCA. Êtes-vous Prêt(e) à vous Déplacer Jusqu'à Cet Endroit ?</h3>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="location" value="oui">
+                                    <span class="radio-mark"></span>
+                                    OUI
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="location" value="non">
+                                    <span class="radio-mark"></span>
+                                    NON
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <!-- Navigation buttons -->
+                        <div class="quiz-navigation">
+                            <button type="button" class="quiz-btn quiz-prev">Précédent</button>
+                            <button type="button" class="quiz-btn quiz-next">Suivant</button>
+                            <button type="button" class="quiz-btn quiz-finish" style="display: none;">Voir mes recommandations</button>
+                        </div>
+
+                        <!-- Progress bar -->
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%;"></div>
+                            </div>
+                            <span class="progress-text">Question 1 sur 6</span>
+                        </div>
+                    </form>
+
+                    <!-- Qualified Contact Form -->
+                    <div id="qualifiedForm" class="qualified-section" style="display: none;">
+                        <form id="qualifiedContactForm" class="qualified-contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="qualifiedNom">Nom complet *</label>
+                                    <input type="text" id="qualifiedNom" name="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="qualifiedTelephone">Téléphone *</label>
+                                    <input type="tel" id="qualifiedTelephone" name="telephone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="qualifiedMessage">Message (optionnel)</label>
+                                <textarea id="qualifiedMessage" name="message" rows="3" placeholder="Décrivez brièvement votre situation..."></textarea>
+                            </div>
+                            
+                            <div class="urgency-notice">
+                                <span class="urgency-icon">⏰</span>
+                                <strong>Places limitées:</strong> Agenda complet - Réservation prioritaire pour profils qualifiés
+                            </div>
+                            
+                            <button type="submit" class="btn-primary qualified-submit">
+                                <i class="fas fa-calendar-check"></i>
+                                Réserver ma consultation
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Not Qualified Message -->
+                    <div id="notQualifiedMessage" class="not-qualified-section" style="display: none;">
+                        <div class="not-qualified-content">
+                            <div class="info-icon">ℹ️</div>
+                            <h3>Merci pour vos réponses</h3>
+                            <p>Votre situation nécessite peut-être une approche différente. Nous vous recommandons de consulter votre dentiste habituel pour un premier bilan.</p>
+                            
+                            <div class="alternative-options">
+                                <h4>Nos conseils :</h4>
+                                <ul>
+                                    <li>Consultez un dentiste pour un examen complet</li>
+                                    <li>Traitez d'abord les problèmes urgents</li>
+                                    <li>Revenez nous voir après stabilisation</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="contact-info-alt">
+                                <p><strong>Pour plus d'informations :</strong></p>
+                                <p>📞 05 22 25 28 87</p>
+                                <p>📍 Rue Soumaya, Angle Bd Abdelmoumen, Casablanca</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Before/After Image -->
+                <div class="hero-doctor">
+                    <img src="assets/before-after.jpg" alt="Transformation dentaire avant après" class="doctor-img">
+                    <div class="doctor-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Patients Satisfaits</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Années d'Expérience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Taux de Réussite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #8BC34A 0%, #689F38 50%, #558B2F 100%); position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: white; margin-bottom: 30px; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">Ce que disent nos patients</h2>
+                <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 20px;">
+                    <i class="fas fa-star" style="color: #fbbf24; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(251,191,36,0.4);"></i>
+                    <i class="fas fa-star" style="color: #fbbf24; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(251,191,36,0.4);"></i>
+                    <i class="fas fa-star" style="color: #fbbf24; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(251,191,36,0.4);"></i>
+                    <i class="fas fa-star" style="color: #fbbf24; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(251,191,36,0.4);"></i>
+                    <i class="fas fa-star" style="color: #fbbf24; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(251,191,36,0.4);"></i>
+                </div>
+                <p style="color: white; font-size: 1.2rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Note Google : 4.8/5 basée sur 50+ avis</p>
+            </div>
+            
+            <div class="testimonials-carousel" style="position: relative; max-width: 1200px; margin: 0 auto;">
+                <!-- Carousel Container -->
+                <div class="carousel-container" style="overflow: hidden; position: relative;">
+                    <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+                        <!-- Review 1 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Excellente clinique dentaire! Le Dr. Chraibi est très professionnel et prend le temps d'expliquer chaque étape du traitement. J'ai fait un implant dentaire et le résultat est parfait. Je recommande vivement!"
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">S</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Soukaina M.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 2 mois</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Très satisfait de mon traitement smile design. L'équipe est accueillante et le cabinet est moderne et propre. Les prix sont raisonnables par rapport à la qualité du service. Merci Dr. Chraibi!"
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">A</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Ahmed B.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 3 mois</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Je suis venue de France spécialement pour mes soins dentaires. Excellent rapport qualité-prix et un suivi remarquable. Le Dr. Chraibi maîtrise parfaitement les dernières techniques. Je recommande!"
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">M</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Marie L.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 1 mois</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Après plusieurs années de complexe avec mon sourire, j'ai enfin trouvé la solution. Les facettes dentaires ont changé ma vie! L'équipe est très professionnelle et à l'écoute. Prix justifiés par la qualité."
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">F</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Fatima Z.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 3 semaines</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="far fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Très bonne expérience. J'ai fait un blanchiment dentaire et le résultat est naturel et durable. Le seul bémol est l'attente parfois un peu longue, mais cela vaut le coup pour la qualité des soins."
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">K</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Karim E.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 2 mois</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="carousel-slide" style="min-width: 100%; padding: 0 15px; box-sizing: border-box;">
+                            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto;">
+                                <div style="display: flex; gap: 4px; margin-bottom: 20px; justify-content: center;">
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                    <i class="fas fa-star" style="color: #fbbf24; font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="color: #1a1a1a; line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; text-align: center;">
+                                    "Cabinet dentaire d'exception! J'ai fait plusieurs implants et couronnes. Le Dr. Chraibi utilise les dernières technologies. Le résultat est parfait et naturel. Je souris enfin avec confiance!"
+                                </p>
+                                <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                                    <div style="width: 50px; height: 50px; background: #8BC34A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">Y</div>
+                                    <div>
+                                        <p style="font-weight: 600; color: #1a1a1a; margin: 0;">Youssef R.</p>
+                                        <p style="color: #666; font-size: 0.9rem; margin: 0;">Il y a 4 mois</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: white; border: none; width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 5px 20px rgba(0,0,0,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                    <i class="fas fa-chevron-left" style="color: #689F38; font-size: 1.2rem;"></i>
+                </button>
+                <button class="carousel-next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: white; border: none; width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 5px 20px rgba(0,0,0,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                    <i class="fas fa-chevron-right" style="color: #689F38; font-size: 1.2rem;"></i>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="carousel-dots" style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+                    <span class="dot active" data-slide="0" style="width: 12px; height: 12px; background: #8BC34A; border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="dot" data-slide="1" style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="dot" data-slide="2" style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="dot" data-slide="3" style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="dot" data-slide="4" style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                    <span class="dot" data-slide="5" style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: all 0.3s;"></span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.google.com/maps/place/Chraibi+Dental+Clinic+-+Clinique+multi+sp%C3%A9cialit%C3%A9+Casa/@33.5812359,-7.6380585,17z/data=!3m1!4b1!4m6!3m5!1s0xda7d2de0a3c7b97:0x7f599e2b4ae9cb48!8m2!3d33.5812359!4d-7.6354836!16s%2Fg%2F11c2gttb7k?entry=ttu" target="_blank" style="display: inline-block; background: white; color: #689F38; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 5px 20px rgba(0,0,0,0.2); transition: all 0.3s;">
+                    <i class="fab fa-google" style="margin-right: 10px;"></i>
+                    Voir tous les avis Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Protocole médical personnalisé</h2>
+                <p class="section-subtitle">Le Smile Design est une approche globale et personnalisée, menée par un chirurgien-dentiste, pour redessiner votre sourire en respectant votre physiologie, vos attentes et votre santé.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Bilan complet & simulation du sourire</h3>
+                    <p>Base de tout Smile Design. État général de la bouche, santé gingivale, absence de caries, détartrage préalable.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Soins des gencives</h3>
+                    <p>Assainir et équilibrer l'esthétique gingivale.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Facettes / composites</h3>
+                    <p>Corriger les défauts de forme ou de teinte persistants.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Blanchiment médical</h3>
+                    <p>Éclaircir la teinte des dents dans le respect de l'émail.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-align-center"></i>
+                    </div>
+                    <h3>Orthodontie</h3>
+                    <p>Repositionner les dents pour un alignement harmonieux.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Suivi & entretien</h3>
+                    <p>Sensibilité temporaire ? Recommandations alimentaires ? Vous êtes accompagné(e).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Où nous trouver</h2>
+                <p class="section-subtitle">Notre clinique est idéalement située au cœur de Casablanca</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <!-- Map -->
+                <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13294.390187723232!2d-7.6354836!3d33.5812359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa7ea6b2f386f65dd%3A0xa7ea6b2f386f65dd!2sChraibi%20Dental%20Clinic%20-%20Clinique%20multi%20sp%C3%A9cialit%C3%A9%20Casa!5e0!3m2!1sfr!2sma!4v1735749123456!5m2!1sfr!2sma" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <!-- Location Info -->
+                <div>
+                    <h3 style="font-size: 2rem; color: #1a1a1a; margin-bottom: 30px;">Clinique Chraibi</h3>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background: #8BC34A; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: #1a1a1a;">Adresse</h4>
+                                <p style="margin: 0; color: #666;">Rue Soumaya, Angle Bd Abdelmoumen<br>Casablanca, Maroc</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background: #8BC34A; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: #1a1a1a;">Téléphone</h4>
+                                <p style="margin: 0; color: #666;">05 22 25 28 87</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background: #8BC34A; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: #1a1a1a;">Horaires</h4>
+                                <p style="margin: 0; color: #666;">
+                                    Lundi - Vendredi: 9h00 - 18h00<br>
+                                    Samedi: 9h00 - 13h00<br>
+                                    Dimanche: Fermé
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #8BC34A;">
+                        <p style="margin: 0; color: #2e7d32;">
+                            <i class="fas fa-car" style="margin-right: 10px;"></i>
+                            <strong>Parking:</strong> Disponible à proximité<br>
+                            <i class="fas fa-bus" style="margin-right: 10px; margin-top: 10px; display: inline-block;"></i>
+                            <strong>Transport:</strong> Accessible en tramway et bus
+                        </p>
+                    </div>
+                    
+                    <a href="https://www.google.com/maps/place/Chraibi+Dental+Clinic+-+Clinique+multi+sp%C3%A9cialit%C3%A9+Casa/@33.5812359,-7.6354836,17z/data=!3m1!4b1!4m6!3m5!1s0xa7ea6b2f386f65dd:0xa7ea6b2f386f65dd!8m2!3d33.5812359!4d-7.6354836!16s%2Fg%2F11c2gttb7k" 
+                       target="_blank" 
+                       style="display: inline-block; margin-top: 20px; background: #8BC34A; color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                        <i class="fas fa-directions" style="margin-right: 10px;"></i>
+                        Obtenir l'itinéraire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Introduction Section -->
+    <section style="padding: 100px 0; background: linear-gradient(135deg, #f8fffe 0%, #e8f5e9 50%, #f1f8e9 100%); position: relative; overflow: hidden;">
+        <!-- Background decorative elements -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(139, 195, 74, 0.1); border-radius: 50%; opacity: 0.5;"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: rgba(139, 195, 74, 0.08); border-radius: 50%; opacity: 0.7;"></div>
+        
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 80px; flex-wrap: wrap;">
+                <!-- Doctor Image -->
+                <div style="flex: 0 0 400px; text-align: center; position: relative;">
+                    <div style="
+                        position: relative;
+                        display: inline-block;
+                        padding: 20px;
+                        background: linear-gradient(135deg, rgba(139, 195, 74, 0.1), rgba(139, 195, 74, 0.05));
+                        border-radius: 30px;
+                        box-shadow: 0 30px 80px rgba(139, 195, 74, 0.2);
+                    ">
+                        <img src="assets/doctor.jpg" alt="Dr. Mounir Chraibi" style="
+                            width: 350px; 
+                            height: 400px; 
+                            border-radius: 20px; 
+                            object-fit: cover;
+                            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+                            transition: transform 0.3s ease;
+                        " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                </div>
+                
+                <!-- Doctor Introduction -->
+                <div style="flex: 1; min-width: 400px;">
+                    <div style="margin-bottom: 30px;">
+                        <span style="
+                            background: linear-gradient(135deg, #8BC34A, #689F38); 
+                            color: white; 
+                            padding: 8px 20px; 
+                            border-radius: 25px; 
+                            font-size: 0.9rem; 
+                            font-weight: 600;
+                            letter-spacing: 0.5px;
+                            box-shadow: 0 5px 15px rgba(139, 195, 74, 0.3);
+                        ">
+                            VOTRE EXPERT EN SMILE DESIGN
+                        </span>
+                    </div>
+                    
+                    <h2 style="
+                        font-size: 3rem; 
+                        color: #1a1a1a; 
+                        margin-bottom: 20px; 
+                        line-height: 1.2;
+                        background: linear-gradient(135deg, #1a1a1a, #4a5568);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    ">
+                        Dr. Mounir Chraibi
+                    </h2>
+                    
+                    <h3 style="
+                        font-size: 1.3rem; 
+                        color: #8BC34A; 
+                        margin-bottom: 30px; 
+                        font-weight: 600;
+                        letter-spacing: 0.5px;
+                    ">
+                        Chirurgien-Dentiste & Spécialiste en Esthétique Dentaire
+                    </h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <p style="
+                            font-size: 1.1rem; 
+                            color: #4a5568; 
+                            line-height: 1.8; 
+                            margin-bottom: 20px;
+                        ">
+                            Avec plus de <strong style="color: #8BC34A;">15 ans d'expérience</strong> en dentisterie esthétique, 
+                            le Dr. Chraibi s'est spécialisé dans l'art du Smile Design pour transformer 
+                            des milliers de sourires à travers le Maroc.
+                        </p>
+                        
+                        <p style="
+                            font-size: 1.1rem; 
+                            color: #4a5568; 
+                            line-height: 1.8; 
+                            margin-bottom: 25px;
+                        ">
+                            Sa philosophie : <em style="color: #8BC34A; font-weight: 600;">
+                            "Chaque sourire raconte une histoire unique. Mon rôle est de révéler 
+                            votre plus belle version en respectant l'harmonie naturelle de votre visage."</em>
+                        </p>
+                    </div>
+                    
+                    <!-- Credentials -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;">
+                        <div style="
+                            background: white; 
+                            padding: 15px 20px; 
+                            border-radius: 15px; 
+                            box-shadow: 0 5px 20px rgba(139, 195, 74, 0.1);
+                            border-left: 4px solid #8BC34A;
+                        ">
+                            <div style="font-weight: 600; color: #8BC34A; font-size: 1.5rem;">2000+</div>
+                            <div style="color: #666; font-size: 0.9rem;">Sourires Transformés</div>
+                        </div>
+                        
+                        <div style="
+                            background: white; 
+                            padding: 15px 20px; 
+                            border-radius: 15px; 
+                            box-shadow: 0 5px 20px rgba(139, 195, 74, 0.1);
+                            border-left: 4px solid #8BC34A;
+                        ">
+                            <div style="font-weight: 600; color: #8BC34A; font-size: 1.5rem;">15+</div>
+                            <div style="color: #666; font-size: 0.9rem;">Années d'Expérience</div>
+                        </div>
+                        
+                        <div style="
+                            background: white; 
+                            padding: 15px 20px; 
+                            border-radius: 15px; 
+                            box-shadow: 0 5px 20px rgba(139, 195, 74, 0.1);
+                            border-left: 4px solid #8BC34A;
+                        ">
+                            <div style="font-weight: 600; color: #8BC34A; font-size: 1.5rem;">98%</div>
+                            <div style="color: #666; font-size: 0.9rem;">Satisfaction Client</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action -->
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <a href="#accueil" style="
+                            background: linear-gradient(135deg, #8BC34A, #689F38);
+                            color: white;
+                            padding: 18px 35px;
+                            border-radius: 30px;
+                            text-decoration: none;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            box-shadow: 0 10px 30px rgba(139, 195, 74, 0.3);
+                            transition: all 0.3s ease;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(139, 195, 74, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(139, 195, 74, 0.3)'">
+                            <i class="fas fa-user-md"></i>
+                            Consulter Dr. Chraibi
+                        </a>
+                        
+                        <div style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-phone" style="color: #8BC34A; margin-right: 8px;"></i>
+                            05 22 25 28 87
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="background: #2c3e50; color: white;">
+        <div class="container">
+            <div class="contact-content" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+                <div class="contact-info" style="flex: 1; min-width: 300px;">
+                    <h2 style="color: white; margin-bottom: 20px;">Contactez-nous</h2>
+                    <p style="color: #bdc3c7; margin-bottom: 30px;">Notre clinique dentaire est à votre disposition pour tous vos besoins en soins dentaires</p>
+                    
+                    <ul class="contact-details" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; margin-bottom: 15px; color: #ecf0f1;">
+                            <i class="fas fa-map-marker-alt" style="color: #8BC34A; margin-right: 15px; width: 20px;"></i>
+                            Rue Soumaya، Angle Bd Abdelmoumen, Casablanca
+                        </li>
+                        <li style="display: flex; align-items: center; margin-bottom: 15px; color: #ecf0f1;">
+                            <i class="fas fa-phone" style="color: #8BC34A; margin-right: 15px; width: 20px;"></i>
+                            05 22 25 28 87
+                        </li>
+                        <li style="display: flex; align-items: center; margin-bottom: 15px; color: #ecf0f1;">
+                            <i class="fas fa-clock" style="color: #8BC34A; margin-right: 15px; width: 20px;"></i>
+                            Lun - Ven: 9h00 - 18h00 | Sam: 9h00 - 13h00
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="doctor-footer" style="flex: 0 0 300px; text-align: center;">
+                    <div style="
+                        position: relative;
+                        display: inline-block;
+                        margin-bottom: 25px;
+                        padding: 15px;
+                        background: linear-gradient(135deg, #8BC34A, #689F38);
+                        border-radius: 50%;
+                        box-shadow: 0 20px 60px rgba(139, 195, 74, 0.4), 0 0 0 8px rgba(139, 195, 74, 0.1);
+                        animation: doctorGlow 2s ease-in-out infinite alternate;
+                    ">
+                        <img src="assets/doctor.jpg" alt="Dr. Chraibi" style="
+                            width: 220px; 
+                            height: 220px; 
+                            border-radius: 50%; 
+                            object-fit: cover; 
+                            border: 6px solid white;
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                        ">
+                    </div>
+                    <h3 style="color: white; margin-bottom: 10px; font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">Dr. Mounir Chraibi</h3>
+                    <p style="color: #bdc3c7; margin-bottom: 20px; font-size: 1.1rem;">Chirurgien-Dentiste<br>Spécialiste en Smile Design</p>
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <a href="#" style="
+                            color: #8BC34A; 
+                            font-size: 1.8rem; 
+                            transition: all 0.3s;
+                            background: rgba(139, 195, 74, 0.1);
+                            padding: 12px;
+                            border-radius: 50%;
+                            box-shadow: 0 5px 15px rgba(139, 195, 74, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(139, 195, 74, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(139, 195, 74, 0.2)';">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="
+                            color: #8BC34A; 
+                            font-size: 1.8rem; 
+                            transition: all 0.3s;
+                            background: rgba(139, 195, 74, 0.1);
+                            padding: 12px;
+                            border-radius: 50%;
+                            box-shadow: 0 5px 15px rgba(139, 195, 74, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(139, 195, 74, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(139, 195, 74, 0.2)';">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="
+                            color: #8BC34A; 
+                            font-size: 1.8rem; 
+                            transition: all 0.3s;
+                            background: rgba(139, 195, 74, 0.1);
+                            padding: 12px;
+                            border-radius: 50%;
+                            box-shadow: 0 5px 15px rgba(139, 195, 74, 0.2);
+                        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(139, 195, 74, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(139, 195, 74, 0.2)';">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
