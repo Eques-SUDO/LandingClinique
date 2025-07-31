@@ -120,7 +120,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Mobile menu toggle (if needed)
+// Enhanced mobile menu toggle for better touch experience
 const createMobileMenu = () => {
     if (window.innerWidth <= 768) {
         const nav = document.querySelector('nav');
@@ -130,20 +130,73 @@ const createMobileMenu = () => {
             const mobileBtn = document.createElement('button');
             mobileBtn.className = 'mobile-menu-btn';
             mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            mobileBtn.style.cssText = 'background: none; border: none; font-size: 1.5rem; color: #333; cursor: pointer;';
+            mobileBtn.style.cssText = `
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: #333; 
+                cursor: pointer;
+                padding: 12px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                min-height: 48px;
+                min-width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                -webkit-tap-highlight-color: transparent;
+            `;
             
             nav.appendChild(mobileBtn);
             
-            mobileBtn.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'white';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            mobileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = navLinks.style.display === 'flex';
+                
+                if (isOpen) {
+                    navLinks.style.display = 'none';
+                    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileBtn.style.background = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.background = 'white';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.padding = '20px';
+                    navLinks.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                    navLinks.style.zIndex = '999';
+                    navLinks.style.borderRadius = '0 0 15px 15px';
+                    mobileBtn.innerHTML = '<i class="fas fa-times"></i>';
+                    mobileBtn.style.background = 'rgba(139, 195, 74, 0.1)';
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                    mobileBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileBtn.style.background = 'none';
+                }
+            });
+            
+            // Close menu on window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    navLinks.style.display = '';
+                    navLinks.style.position = '';
+                    navLinks.style.top = '';
+                    navLinks.style.left = '';
+                    navLinks.style.width = '';
+                    navLinks.style.background = '';
+                    navLinks.style.flexDirection = '';
+                    navLinks.style.padding = '';
+                    navLinks.style.boxShadow = '';
+                    mobileBtn.style.background = 'none';
+                }
             });
         }
     }
@@ -152,8 +205,29 @@ const createMobileMenu = () => {
 window.addEventListener('resize', createMobileMenu);
 createMobileMenu();
 
+// Mobile-specific quiz optimizations
+function optimizeForMobile() {
+    // Prevent zoom on input focus for iOS
+    const inputs = document.querySelectorAll('input[type="text"], input[type="tel"], textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            if (window.innerWidth < 768) {
+                // Temporarily set font-size to 16px to prevent zoom
+                this.style.fontSize = '16px';
+            }
+        });
+        
+        input.addEventListener('blur', function() {
+            // Reset font-size
+            this.style.fontSize = '';
+        });
+    });
+}
+
 // Quiz functionality
 document.addEventListener('DOMContentLoaded', function() {
+    optimizeForMobile();
+    
     const quizForm = document.getElementById('dentalQuiz');
     if (!quizForm) return;
 

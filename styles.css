@@ -1125,32 +1125,135 @@ nav {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 10px 5px;
+    }
+
     .main-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.1;
     }
     
     .subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.3;
     }
     
     .hero-quiz .quiz-header h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .hero-quiz .quiz-header p {
+        font-size: 0.9rem;
     }
     
     .logo-img {
-        height: 90px;
+        height: 80px;
+    }
+
+    .doctor-img {
+        max-width: 220px;
+    }
+
+    .quiz-form {
+        padding: 12px 15px;
+    }
+
+    .quiz-question h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .checkbox-item, .radio-item {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .checkmark, .radio-mark {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    .scale-number {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .quiz-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        min-width: 90px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+    }
+
+    .qualified-submit {
+        padding: 14px 18px;
+        font-size: 1rem;
     }
     
     .qualification-success h3 {
-        font-size: 1.6rem;
-    }
-    
-    .not-qualified-content h3 {
         font-size: 1.5rem;
     }
     
+    .not-qualified-content h3 {
+        font-size: 1.4rem;
+    }
+    
     .qualified-section, .not-qualified-section {
-        padding: 25px 20px;
+        padding: 20px 15px;
+    }
+
+    .urgency-notice {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .other-input, .pain-details {
+        padding: 10px 12px;
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    /* Stack radio/checkbox items with text inputs */
+    .checkbox-item, .radio-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .checkbox-item:has(.other-input),
+    .radio-item:has(.pain-details),
+    .radio-item:has(.budget-input) {
+        flex-direction: column;
+    }
+
+    .budget-input {
+        padding: 10px 12px;
+        font-size: 16px;
+        margin-top: 8px;
+        width: 100%;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .budget-input:focus {
+        border-color: #8BC34A;
+        box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.1);
     }
 }
 
@@ -1799,8 +1902,158 @@ nav {
     }
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - Enhanced for phone users */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 15px 10px;
+        min-height: auto;
+    }
+
+    .hero-header {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .logo-img {
+        height: 100px;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .hero-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-quiz {
+        order: 1;
+    }
+
+    .hero-doctor {
+        order: 2;
+        padding: 15px;
+    }
+
+    .doctor-img {
+        max-width: 250px;
+        height: auto;
+    }
+
+    .doctor-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .stat-item {
+        padding: 12px 8px;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    /* Quiz optimizations for mobile */
+    .hero-quiz .quiz-header {
+        padding: 20px 20px 0;
+    }
+
+    .hero-quiz .quiz-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-quiz .quiz-header p {
+        font-size: 1rem;
+    }
+
+    .quiz-form {
+        padding: 15px 20px;
+    }
+
+    .quiz-question h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    .checkbox-item, .radio-item {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .checkmark, .radio-mark {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+    }
+
+    .scale-options {
+        gap: 3px;
+    }
+
+    .scale-number {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .quiz-navigation {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .quiz-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+
+    /* Form optimizations */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .qualified-submit {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+
+    .urgency-notice {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+        margin: 20px 0;
+    }
+
+    /* Navigation improvements */
     .nav-links {
         display: none;
     }
@@ -1820,6 +2073,7 @@ nav {
         margin-top: 40px;
         flex-direction: column;
         gap: 20px;
+        padding: 25px 30px;
     }
 
     .before-after {
@@ -1832,6 +2086,33 @@ nav {
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Touch-friendly buttons */
+    .btn-primary:hover, .btn-secondary:hover,
+    .quiz-btn:hover, .checkbox-item:hover, .radio-item:hover {
+        transform: none; /* Disable hover effects on mobile */
+    }
+
+    /* Better touch targets */
+    .scale-item {
+        padding: 5px;
+    }
+
+    .other-input, .pain-details {
+        padding: 12px 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        margin-left: 5px;
     }
 }
 
@@ -1856,6 +2137,87 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #689F38, #1e40af);
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    /* Remove tap highlight on mobile */
+    * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    /* Allow text selection where needed */
+    p, span, .quiz-question h3, label, input, textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+
+    /* Optimize images for mobile performance */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        will-change: transform;
+    }
+
+    /* Better touch targets */
+    .checkbox-item, .radio-item, .scale-item, .quiz-btn, 
+    .btn-primary, .btn-secondary, .qualified-submit {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    /* Prevent double-tap zoom */
+    .quiz-btn, .btn-primary, .btn-secondary, .qualified-submit {
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /* Smooth scrolling on iOS */
+    .hero, .services, .contact {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Fix viewport issues */
+    .hero {
+        min-height: 100svh; /* Use small viewport height for mobile */
+    }
+
+    /* Optimize carousel for touch */
+    .carousel-container {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    .carousel-prev, .carousel-next {
+        min-height: 48px;
+        min-width: 48px;
+        touch-action: manipulation;
+    }
+
+    .dot {
+        min-height: 24px;
+        min-width: 24px;
+        touch-action: manipulation;
+        padding: 8px;
+    }
+
+    /* Optimize images for loading */
+    .doctor-img, .logo-img, .comparison-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .logo-img {
+        loading: eager;
+    }
+
+    .doctor-img, .comparison-img {
+        loading: lazy;
+    }
 }
 
 /* Enhanced header scroll effect */
