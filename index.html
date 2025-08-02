@@ -53,30 +53,57 @@
     <!-- Hero Section -->
     <section class="hero" id="accueil">
         <div class="hero-container">
-            <!-- Top Section: Logo and Title -->
-            <div class="hero-header">
-                <div class="hero-logo">
-                    <img src="assets/clinic-logo.png" alt="Chraibi Dental Clinic" class="logo-img" loading="eager" decoding="sync">
+            <div class="hero-content">
+                <img src="assets/clinic-logo.png" alt="Chraibi Dental Clinic" class="logo-img" loading="eager" decoding="sync">
+                
+                <h1 class="main-title">
+                    Remplacer Facilement<br>
+                    <span class="highlight">Vos Dents Manquantes</span>
+                </h1>
+                <p class="subtitle">
+                    Découvrez la <span class="text-highlight">meilleure solution</span> pour remplacer vos dents – 
+                    <span class="text-highlight">rapide</span> et <span class="text-highlight">sans douleur</span>
+                </p>
+                
+                <!-- Trust Block -->
+                <div class="trust-block">
+                    <div class="trust-item">
+                        <span class="trust-icon">✅</span>
+                        <span class="trust-text">Plus de 800 patients satisfaits à Casablanca</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🦷</span>
+                        <span class="trust-text">Implantologue certifié – Dr. Mounir Chraibi</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">📞</span>
+                        <span class="trust-text">Diagnostic gratuit par téléphone en moins de 24h</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🔒</span>
+                        <span class="trust-text">Sans engagement – Vos données sont 100% confidentielles</span>
+                    </div>
                 </div>
-                <div class="hero-text">
-                    <h1 class="main-title">
-                        Remplacer Facilement<br>
-                        <span class="highlight">Vos Dents Manquantes</span>
-                    </h1>
-                    <p class="subtitle">
-                        Découvrez la <span class="text-highlight">meilleure solution</span> pour remplacer vos dents – 
-                        <span class="text-highlight">rapide</span> et <span class="text-highlight">sans douleur</span>
-                    </p>
-                </div>
-            </div>
 
-            <!-- Main Content: Quiz and Doctor Image -->
-            <div class="hero-main">
-                <!-- Quiz Section -->
-                <div class="hero-quiz">
+                <!-- Quiz and Image Section -->
+                <div class="quiz-image-container">
+                    <!-- Before-After Image -->
+                    <div class="before-after-section">
+                        <img src="assets/before-after.jpg" alt="Transformation dentaire avant-après" class="before-after-img">
+                    </div>
+                    
+                    <!-- Quiz Form -->
+                    <div class="hero-quiz">
+                    
                     <div class="quiz-header">
                         <h2>Évaluez vos besoins dentaires</h2>
                         <p>Répondez à quelques questions pour recevoir des conseils personnalisés</p>
+                    </div>
+                    
+                    <!-- Context phrase before form -->
+                    <div class="form-context">
+                        <span class="context-icon">💡</span>
+                        <p>En 30 secondes, dites-nous ce que vous cherchez pour recevoir un diagnostic personnalisé par téléphone.</p>
                     </div>
                     
                     <form id="dentalQuiz" class="quiz-form">
@@ -264,7 +291,13 @@
                         <div class="quiz-navigation">
                             <button type="button" class="quiz-btn quiz-prev">Précédent</button>
                             <button type="button" class="quiz-btn quiz-next">Suivant</button>
-                            <button type="button" class="quiz-btn quiz-finish" style="display: none;">Voir mes recommandations</button>
+                            <button type="button" class="quiz-btn quiz-finish" style="display: none;">Recevoir mon diagnostic</button>
+                        </div>
+                        
+                        <!-- Callback clarification -->
+                        <div class="callback-info" style="display: none;">
+                            <span class="callback-icon">📞</span>
+                            <p>Un conseiller de la clinique vous rappelle sous 24h</p>
                         </div>
 
                         <!-- Progress bar -->
@@ -301,9 +334,14 @@
                             </div>
                             
                             <button type="submit" class="btn-primary qualified-submit">
-                                <i class="fas fa-calendar-check"></i>
-                                Réserver ma consultation
+                                <i class="fas fa-phone"></i>
+                                Recevoir mon diagnostic
                             </button>
+                            
+                            <div class="submit-clarification">
+                                <span>📞</span>
+                                <p>Un conseiller de la clinique vous rappelle sous 24h</p>
+                            </div>
                         </form>
                     </div>
 
@@ -330,24 +368,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Before/After Image -->
-                <div class="hero-doctor">
-                    <img src="assets/before-after.jpg" alt="Transformation dentaire avant après" class="doctor-img" loading="lazy" decoding="async">
-                    <div class="doctor-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Patients Satisfaits</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Années d'Expérience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Taux de Réussite</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -542,65 +562,6 @@
     </section>
 
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Protocole médical personnalisé</h2>
-                <p class="section-subtitle">Le Smile Design est une approche globale et personnalisée, menée par un chirurgien-dentiste, pour redessiner votre sourire en respectant votre physiologie, vos attentes et votre santé.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Bilan complet & simulation du sourire</h3>
-                    <p>Base de tout Smile Design. État général de la bouche, santé gingivale, absence de caries, détartrage préalable.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Soins des gencives</h3>
-                    <p>Assainir et équilibrer l'esthétique gingivale.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Facettes / composites</h3>
-                    <p>Corriger les défauts de forme ou de teinte persistants.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Blanchiment médical</h3>
-                    <p>Éclaircir la teinte des dents dans le respect de l'émail.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-align-center"></i>
-                    </div>
-                    <h3>Orthodontie</h3>
-                    <p>Repositionner les dents pour un alignement harmonieux.</p>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Suivi & entretien</h3>
-                    <p>Sensibilité temporaire ? Recommandations alimentaires ? Vous êtes accompagné(e).</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Location Section -->
     <section style="padding: 80px 0; background: #f8f9fa;">
